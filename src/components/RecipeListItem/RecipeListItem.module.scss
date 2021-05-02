@@ -1,0 +1,69 @@
+.RecipeListItem{
+	
+}
+
+.RecipeLink{
+	text-decoration: none;
+	color: inherit;
+}
+
+.RecipeData{
+
+}
+
+.RecipeName{
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	padding: 24px 8px 10px;
+}
+
+.RecipeThumbnail{
+	width: 100%;
+	height: 63vw;
+	background-size: cover;
+}
+
+.RecipeInstructions{
+	display: none;
+}
+
+
+
+.WidthSmallerOrEqualTo500{
+
+}
+
+.WidthLargerThan500{
+	max-width: 700px;
+	margin: 16px auto;
+
+	.RecipeLink{
+		display: block;
+		overflow: hidden;
+	}
+
+	.RecipeData{
+		float: right;
+    	width: 75%;
+    	padding: 10px 10px 0 10px;
+    	box-sizing: border-box;
+	}
+
+	.RecipeName{
+		text-align: left;
+		padding: 0;
+	}
+
+	.RecipeInstructions{
+		display: block;
+	}
+
+	.RecipeThumbnail{
+		height: 23vw;
+	    width: 25%;
+	    max-height: 190px;
+	    float: right;
+	    border-radius: 5px;
+	}
+}

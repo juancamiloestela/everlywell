@@ -1,0 +1,26 @@
+.MainPage{
+	
+}
+
+.Header{
+	padding: 32px;
+	background-image: url(https://raw.githubusercontent.com/EverlyWell/react-challenge/master/assets/home-background.jpg);
+	background-size: cover;
+}
+
+.HeaderLogo{
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	background-image: url(https://raw.githubusercontent.com/EverlyWell/react-challenge/master/assets/logo.png);
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.Title{
+	font-size: 18px;
+	text-align: center;
+	font-style: italic;
+	margin: 32px 0;
+	color: #5a5a5a;
+}
