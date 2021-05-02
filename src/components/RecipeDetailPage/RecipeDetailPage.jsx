@@ -1,22 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from './RecipeDetailPage.module.scss';
-import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faHeart } from '@fortawesome/free-solid-svg-icons';
-import { useContainerQuery } from 'react-container-query';
 import { useParams } from "react-router-dom";
+import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 import { getRecipe } from 'functions/recipes';
 
-const containerQueries = {
-  [styles.WidthBetween400And599]: {
-    minWidth: 400,
-    maxWidth: 599,
-  },
-  [styles.WidthLargerThan600]: {
-    minWidth: 600,
-  },
-};
 
 let favorites = JSON.parse(localStorage.getItem('favorites') || "[]");
 
@@ -27,7 +17,6 @@ function RecipeDetailPage() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState({});
   const [isFavorite, setFavorite] = useState(favorites.includes(id));
-  const [containerClassNames, containerRef] = useContainerQuery(containerQueries);
 
   useEffect(() => {
     async function fetchData(){
@@ -62,7 +51,7 @@ function RecipeDetailPage() {
 
 
   return (
-    <div ref={containerRef} className={classnames(styles.RecipeDetailPage, containerClassNames)}>
+    <div className={styles.RecipeDetailPage}>
       
       <div className={styles.Header}>
         <Link to="/">

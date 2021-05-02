@@ -3,20 +3,9 @@ import styles from './GlobalRecipeSearch.module.scss';
 import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { useContainerQuery } from 'react-container-query';
 import { searchRecipeByName } from 'functions/recipes';
 import RecipeListItem from 'components/RecipeListItem';
 
-
-const containerQueries = {
-  [styles.WidthBetween400And599]: {
-    minWidth: 400,
-    maxWidth: 599,
-  },
-  [styles.WidthLargerThan600]: {
-    minWidth: 600,
-  },
-};
 
 let timeout = null;
 
@@ -28,7 +17,6 @@ function GlobalRecipeSearch() {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const searchField = useRef(null);
-  const [containerClassNames, containerRef] = useContainerQuery(containerQueries);
 
 
   useEffect(() => {
@@ -55,7 +43,7 @@ function GlobalRecipeSearch() {
 
 
   return (
-    <div ref={containerRef} className={classnames(styles.GlobalRecipeSearch, containerClassNames)}>
+    <div className={styles.GlobalRecipeSearch}>
       <FontAwesomeIcon 
         icon={faSearch} 
         className={styles.OpenSearchButton} 

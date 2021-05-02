@@ -5,15 +5,11 @@ import { useContainerQuery } from 'react-container-query';
 
 
 const containerQueries = {
-  [styles.WidthBetween400And599]: {
-    minWidth: 400,
-    maxWidth: 599,
+  [styles.WidthSmallerOrEqualTo600]: {
+    // default mobile
   },
-  [styles.WidthSmallerOrEqualTo500]: {
-    
-  },
-  [styles.WidthLargerThan500]: {
-    minWidth: 600,
+  [styles.WidthLargerThan600]: {
+    minWidth: 600
   },
 };
 
