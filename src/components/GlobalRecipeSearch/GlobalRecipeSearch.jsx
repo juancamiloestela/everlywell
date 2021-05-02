@@ -23,7 +23,7 @@ function GlobalRecipeSearch() {
     if (open){
       setSearch("");
       setResults([]);
-      searchField.current.focus();
+      setTimeout(() => searchField.current.focus(), 150);
     }
   }, [open]);
 
