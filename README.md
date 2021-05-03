@@ -31,7 +31,9 @@ The search functionality spec is strange. From the designs it looks like the use
 
 Total time was ~4hrs + ~45mins setting up the project.
 
-# Roadmap
+# Roadmap (prioritized)
+- Fix having to scroll to see search input when keyboard pops up
+- Fix dropshadow on search button in mobile
 - Unit tests, for this data transforming functions should be extracted as units
 - Move localstorage favorite functionality to a data layer/separate file. React component shouldn't be aware of localstorage.
 - More elements can be componentized. Eg. Gray header bar in detail and search pages.

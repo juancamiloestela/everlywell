@@ -18,15 +18,6 @@ function GlobalRecipeSearch() {
   const [results, setResults] = useState([]);
   const searchField = useRef(null);
 
-
-  useEffect(() => {
-    if (open){
-      setSearch("");
-      setResults([]);
-      setTimeout(() => searchField.current.focus(), 150);
-    }
-  }, [open]);
-
   useEffect(() => {
     async function fetchData(){
       const results = await searchRecipeByName(search);
@@ -47,7 +38,16 @@ function GlobalRecipeSearch() {
       <FontAwesomeIcon 
         icon={faSearch} 
         className={styles.OpenSearchButton} 
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          setSearch("");
+          setResults([]);
+          setOpen(true);
+          // keyboard only opens on direct user input, so we trigger it here
+          searchField.current.focus();
+          // keyboard shifts content up so input disappears above, this is not
+          // working at the moment and could use better planning
+          window.scrollTo(0, searchField.current.offsetTop);
+        }}
         />
 
       <div className={classnames(styles.SearchModal, {[styles.ModalOpen]: open})}>

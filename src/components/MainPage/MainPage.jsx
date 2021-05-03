@@ -18,7 +18,6 @@ function MainPage() {
     fetchData();
   }, []);
 
-
   return (
     <div className={styles.MainPage}>
       

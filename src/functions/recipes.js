@@ -6,7 +6,8 @@ export async function getRecipe(id){
 }
 
 export async function getRandomRecipe(){
-  const response = await axios.get("https://www.themealdb.com/api/json/v1/1/random.php");
+  const cacheBuster = String(Math.random()).replace("0.", "");
+  const response = await axios.get("https://www.themealdb.com/api/json/v1/1/random.php?t=" + cacheBuster);
   return response.data.meals[0];
 }
 
