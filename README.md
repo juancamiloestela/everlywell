@@ -34,6 +34,7 @@ Total time was ~4hrs + ~45mins setting up the project.
 # Roadmap (prioritized)
 - Fix having to scroll to see search input when keyboard pops up
 - Fix dropshadow on search button in mobile
+- Mobile has a lot to be improved visually, GlobalSearch is not really global so consider making it a standalone page/route and remove floating elements that use position fixed which is not reliable in older devices.
 - Unit tests, for this data transforming functions should be extracted as units
 - Move localstorage favorite functionality to a data layer/separate file. React component shouldn't be aware of localstorage.
 - More elements can be componentized. Eg. Gray header bar in detail and search pages.
